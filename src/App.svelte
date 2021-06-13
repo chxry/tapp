@@ -5,12 +5,12 @@
   let localHighScore = parseInt(localStorage.getItem("highScore"));
   let highScore = localHighScore ? localHighScore : 0;
 
-  const handlePieceClick = (e: MouseEvent,idx: number) => {
+  const handlePieceClick = (e: MouseEvent, idx: number) => {
     let piece = table[idx];
-    let target = <HTMLDivElement> e.target;
-    setTimeout(() => target.id = "", 50);
-    if(!piece) {
-      if (score > highScore) { 
+    let target = <HTMLDivElement>e.target;
+    setTimeout(() => (target.id = ""), 50);
+    if (!piece) {
+      if (score > highScore) {
         highScore = score;
         localStorage.setItem("highScore", highScore.toString());
       }
@@ -22,7 +22,7 @@
     score++;
     table[idx] = false;
     table[getRandomIndex(idx)] = true;
-  }
+  };
 
   const getRandomIndex = (not: number) => {
     while (true) {
@@ -31,7 +31,7 @@
         return idx;
       }
     }
-  }
+  };
 
   for (var i = 0; i < 3; i++) {
     table[getRandomIndex(0)] = true;
@@ -45,10 +45,13 @@
     <Score label="HIGH-SCORE" value={highScore} />
   </div>
   <div class="game">
-    {#each Array(4) as _,row}
+    {#each Array(4) as _, row}
       <div class="row">
-        {#each Array(4) as _,col}
-          <div on:click={(e) => handlePieceClick(e, row*4 + col)} class={["tile", table[row*4 + col] ? "active" : ""].join(" ")}/>
+        {#each Array(4) as _, col}
+          <div
+            on:click={(e) => handlePieceClick(e, row * 4 + col)}
+            class={["tile", table[row * 4 + col] ? "active" : ""].join(" ")}
+          />
         {/each}
       </div>
     {/each}

@@ -13,13 +13,14 @@
     margin-left: 16px;
   }
 
-  h2, h5 {
+  h2,
+  h5 {
     text-align: right;
   }
 
   h2 {
     font-size: 40px;
-  } 
+  }
 
   h5 {
     font-weight: 400;
