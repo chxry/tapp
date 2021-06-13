@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  color: #fff;
+}
+
+body {
+  background: #222;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 54px;
+  flex: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top,.game {
+  width: 600px;
+}
+
+.top {
+  display: flex;
+  margin: 8px 0 8px 0;
+}
+
+.game {
+  display:flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.row {
+  display:flex;
+}
+
+.tile {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  transition: background 100ms;
+  border: 1px solid #111;
+  cursor: pointer;
+}
+
+.active {
+  background: #111;
+}
+
+#correct {
+  background: #2ecc71;
+}
+
+#incorrect {
+  background: #e74c3c;
+}
