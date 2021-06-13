@@ -1,6 +1,10 @@
 <script lang="ts">
   import Score from "./Score.svelte";
+  import * as Tone from "tone";
+
+  const notes = ["D3","D3","D4","A3","G#3","G3","F3","D3","F3","G3","C3","C3","D4","A3","G#3","G3","F3","D3","F3","G3","B2","B2","D4","A3","G#3","G3","F3","D3","F3","G3","A#2","A#2","D4","A3","G#3","G3","F3","D3","F3","G3"]
   const table = Array(16).fill(false);
+  const synth = new Tone.MembraneSynth({ volume: -10 }).toDestination();
   let score = 0;
   let localHighScore = parseInt(localStorage.getItem("highScore"));
   let highScore = localHighScore ? localHighScore : 0;
@@ -18,6 +22,7 @@
       target.id = "incorrect";
       return;
     }
+    synth.triggerAttackRelease(notes[score], "8n");
     target.id = "correct";
     score++;
     table[idx] = false;
