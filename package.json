@@ -7,13 +7,15 @@
     "dev": "rollup -c rollup.config.ts -w",
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "prettier": "prettier --write src/*"
+    "deploy": "gh-pages -d public",
+    "prettier": "prettier --write ."
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "@tsconfig/svelte": "^2.0.0",
+    "gh-pages": "^3.2.0",
     "prettier": "^2.3.1",
     "prettier-plugin-svelte": "^2.3.0",
     "rollup": "^2.3.4",
