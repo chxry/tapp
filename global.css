@@ -19,7 +19,8 @@ main {
   align-items: center;
 }
 
-.top,.game {
+.top,
+.game {
   width: 600px;
 }
 
@@ -29,13 +30,13 @@ main {
 }
 
 .game {
-  display:flex;
+  display: flex;
   flex-direction: column;
   height: 600px;
 }
 
 .row {
-  display:flex;
+  display: flex;
 }
 
 .tile {
