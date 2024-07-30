@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-size: 54px;
+  font-size: 3.5em;
   flex: 1;
 }
 
@@ -19,20 +19,17 @@ main {
   align-items: center;
 }
 
-.top,
-.game {
-  width: 600px;
-}
-
 .top {
   display: flex;
-  margin: 8px 0 8px 0;
+  width: 40em;
+  margin: 0.5em 0 0.5em 0;
 }
 
 .game {
   display: flex;
   flex-direction: column;
-  height: 600px;
+  width: 40em;
+  height: 40em;
 }
 
 .row {
@@ -40,8 +37,8 @@ main {
 }
 
 .tile {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  aspect-ratio: 1;
   background: #fff;
   transition: background 100ms;
   border: 1px solid #111;
@@ -58,4 +55,17 @@ main {
 
 #incorrect {
   background: #e74c3c;
+}
+
+.score {
+  margin-left: 1em;
+  text-align: right;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h5 {
+  font-weight: 400;
 }
