@@ -56,12 +56,12 @@
       <div class="row">
         {#each Array(size) as _, col}
           <div
-            on:click={(e) => handlePieceClick(e, row * size + col)}
+            on:mousedown={(e) => handlePieceClick(e, row * size + col)}
             class={["tile", table[row * size + col] ? "active" : ""].join(" ")}
           />
         {/each}
       </div>
     {/each}
   </div>
-  <button on:click={() => {size = 5; init();}}>mrow</button>
+  <!-- <button on:click={() => {size = 5; init();}}>mrow</button> -->
 </main>
